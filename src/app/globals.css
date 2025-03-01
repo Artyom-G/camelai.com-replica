@@ -37,21 +37,19 @@
   --clr-black: #000;
   --clr-white: #fff;
   --clr-white-10: #ffffff1c;
+  --clr-light-background: #0d1014;
   --fs-button: 18px;
   --fw-button: 600; 
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-mono: 'Roboto Mono', 'Courier New', 'Inconsolata', 'Source Code Pro', 'Menlo', 'Consolas', monospace;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu";
+  background: var(--clr-light-background);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  display: block;
 }
 
 * {
@@ -182,7 +180,6 @@ body {
   }
 }
 
-/* Animation triggers on hover */
 .video-container a:hover .hover-animate-rotate {
   animation: rotate 4s linear infinite;
 }
@@ -190,3 +187,20 @@ body {
 .video-container a:hover .hover-animate-colorShift {
   animation: colorShift 4s infinite;
 }
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-carousel {
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: scroll-left linear infinite;
+}
+
