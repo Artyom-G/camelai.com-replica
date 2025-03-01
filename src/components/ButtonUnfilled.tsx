@@ -1,3 +1,5 @@
+"use client";
+
 export default function ButtonUnfilled({ children }: { children: React.ReactNode }) {
     return (
       <button

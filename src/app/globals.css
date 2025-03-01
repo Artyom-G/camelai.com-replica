@@ -36,6 +36,7 @@
   --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1), 0 6px 20px -3px rgba(0, 0, 0, 0.2);
   --clr-black: #000;
   --clr-white: #fff;
+  --clr-white-10: #ffffff1c;
   --fs-button: 18px;
   --fw-button: 600; 
 }
@@ -107,5 +108,12 @@ body {
   }
   .primary-button {
     width: 180px;
+  }
+}
+
+@media (min-width: 380px) {
+  .yc-backed-tag {
+    width: auto;
+    padding: 0 8px;
   }
 }

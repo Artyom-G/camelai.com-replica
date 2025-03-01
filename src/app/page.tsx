@@ -16,8 +16,10 @@ export default function Home() {
         <ButtonFilled>Try Free</ButtonFilled>
         <ButtonUnfilled>Book Demo</ButtonUnfilled>
       </div>
-      <div>
-        <Tag text="Backed by Y Combinator" imageSrc="https://camelai.com/assets/images/yc-logo.png"></Tag>
+      <div className="flex flex-row items-center mt-[52] gap-2">
+        <Tag text="Y Combinator backed" imageSrc="https://camelai.com/assets/images/yc-logo.png"></Tag>
+        <Tag text="Enterprise Security" imageSrc="https://camelai.com/assets/images/lock-icon.png"></Tag>
+        <Tag text="100% Data Privacy" imageSrc="https://camelai.com/assets/images/shield-icon.png"></Tag>
       </div>
     </main>
   );
