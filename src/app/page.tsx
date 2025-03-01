@@ -1,10 +1,14 @@
-import Image from "next/image";
+import backgroundImage from "@/assets/background-orange-gradient.jpg";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-900 text-white">
-      <h1 className="text-4xl font-bold">Welcome to My Next.js App</h1>
+    <main
+      className="relative flex items-center h-screen w-full 
+                 bg-cover bg-center bg-no-repeat flex-col"
+      style={{ backgroundImage: `url(${backgroundImage.src})` }}
+    >
+      <h1 className="text-white font-semibold text-6xl mt-[110] pb-10">The AI Data Analyst</h1>
+      <h2 className="text-white text-2xl">Ask questions, get instant charts and insights from your data.</h2>
     </main>
   );
 }
-
