@@ -1,25 +1,12 @@
-import backgroundImage from "@/assets/background-orange-gradient.jpg";
-import ButtonFilled from "@/components/ButtonFilled";
-import ButtonUnfilled from "@/components/ButtonUnfilled";
-import Tag from "@/components/Tag";
+import SectionMain from "@/components/SectionMain";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main
-      className="relative flex items-center h-screen w-full 
-                 bg-cover bg-center bg-no-repeat flex-col"
-      style={{ backgroundImage: `url(${backgroundImage.src})` }}
-    >
-      <h1 className="text-white font-semibold text-6xl mt-[110] pb-10">The AI Data Analyst</h1>
-      <h2 className="text-white text-2xl">Ask questions, get instant charts and insights from your data.</h2>
-      <div className="flex flex-row items-center mt-[64] gap-5">
-        <ButtonFilled>Try Free</ButtonFilled>
-        <ButtonUnfilled>Book Demo</ButtonUnfilled>
-      </div>
-      <div className="flex flex-row items-center mt-[52] gap-2">
-        <Tag text="Y Combinator backed" imageSrc="https://camelai.com/assets/images/yc-logo.png"></Tag>
-        <Tag text="Enterprise Security" imageSrc="https://camelai.com/assets/images/lock-icon.png"></Tag>
-        <Tag text="100% Data Privacy" imageSrc="https://camelai.com/assets/images/shield-icon.png"></Tag>
+    <main>
+      <SectionMain></SectionMain>
+      <div>
+        <Footer></Footer>
       </div>
     </main>
   );
