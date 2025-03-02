@@ -4,7 +4,6 @@ import SectionImage from "@/components/SectionImage";
 import SectionColumn from "@/components/SectionColumn";
 import SectionFAQ from "@/components/SectionFAQ";
 import SectionGetStarted from "@/components/SectionGetStarted";
-import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -23,9 +22,6 @@ preview ."
             <SectionColumn/>
             <SectionFAQ/>
             <SectionGetStarted/>
-            <div>
-                <Footer/>
-            </div>
         </main>
     );
 }

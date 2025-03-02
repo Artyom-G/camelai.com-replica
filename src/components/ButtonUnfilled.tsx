@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function ButtonUnfilled({ children }: { children: React.ReactNode }) {
     return (
       <button
@@ -9,7 +11,7 @@ export default function ButtonUnfilled({ children }: { children: React.ReactNode
                    relative overflow-hidden z-10 transform hover:translate-y-[-1px] cursor-pointer"
       >
         {children}
-        <img className="button-icon h-[14px] ml-[9px] filter invert" src="https://camelai.com/assets/images/chevron-right-black.png" />
+        <Image className="button-icon h-[14px] ml-[9px] filter invert" src="https://camelai.com/assets/images/chevron-right-black.png" alt="arrow" width={8} height={14}/>
       </button>
     );
   }
