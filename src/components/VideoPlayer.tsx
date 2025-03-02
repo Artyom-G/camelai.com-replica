@@ -26,7 +26,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc }) => {
           alt="play button"
           width={130}
           height={130}
-          className="transition-all ease-in-out duration-500 relative z-50 filter drop-shadow-lg z-50"
+          className="transition-all ease-in-out duration-500 relative filter drop-shadow-lg z-50"
         />
       </a>
     </div>

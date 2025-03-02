@@ -2,13 +2,14 @@ import SectionMain from "@/components/SectionMain";
 import SectionCarousel from "@/components/SectionCarousel";
 import SectionImage from "@/components/SectionImage";
 import SectionColumn from "@/components/SectionColumn";
+import SectionFAQ from "@/components/SectionFAQ";
 import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
         <main className="justify-center justify-items-center align-middle">
-            <SectionMain></SectionMain>
-            <SectionCarousel></SectionCarousel>
+            <SectionMain/>
+            <SectionCarousel/>
             <SectionImage h1="Ask any question" h2_1="Camel uses your live data." h2_2="Get tables and charts instantly."
                 bannerSrc="https://camelai.com/assets/images/chat-demo-ss.png"
                 iconSrc="https://camelai.com/assets/images/code-icon.png">
@@ -18,9 +19,10 @@ preview ."
                 bannerSrc="https://camelai.com/assets/images/dashboard-demo-ss.png"
                 iconSrc="https://camelai.com/assets/images/light-bulb-icon.png">
             </SectionImage>
-            <SectionColumn></SectionColumn>
+            <SectionColumn/>
+            <SectionFAQ/>
             <div>
-                <Footer></Footer>
+                <Footer/>
             </div>
         </main>
     );
