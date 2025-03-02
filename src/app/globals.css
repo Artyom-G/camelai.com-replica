@@ -61,6 +61,25 @@ body {
   scrollbar-color: var(--clr-var-text-40) transparent;
 }
 
+.nav-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #9cc0c3, #767e95, #816f80);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .faq a {
   color:var(--clr-link-blue);
   cursor: pointer;
@@ -329,3 +348,13 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+@layer utilities {
+
+  .input-field {
+    width: 220px;
+    height: 45px;
+    border-radius: 25px;
+  }
+}
+

@@ -3,13 +3,13 @@ import FAQ from './FAQ';
 export default function SectionFAQ() {
 
     return (
-        <div className='w-full bg-gradient-to-b from-transparent to-black/80 pb-[100px]'>
+        <div className='w-full bg-gradient-to-b from-transparent to-black pb-[100px]'>
             <div className="max-w-[1000px] mx-auto p-4 text-white">
                 <h2 className="text-3xl font-semibold mb-6 text-center">FAQs</h2>
                 <FAQ question="How is my data stored?">camelAI's infrastructure is hosted on AWS. 
                     Data from applications is pulled only when necessary and limited to what you request in your prompt. 
-                    It is stored in an EC2 cache for 5 minutes and then deleted. For more information, please see our 
-                    <a>Security Policy</a> and our <a>security blog post</a>.
+                    It is stored in an EC2 cache for 5 minutes and then deleted. For more information, please see
+                    our <a>Security Policy</a> and our <a>security blog post</a>.
                 </FAQ>
                 <FAQ question="Do you train on my data?">
                     No, we do not train on your data. CamelAI is powered by OpenAI's API. We have opted out of data sharing for training. 
