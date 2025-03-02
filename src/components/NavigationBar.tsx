@@ -14,13 +14,13 @@ export default function NavigationBar() {
             </Link>
     
             <div className="space-x-6 align-middle">
-              <Link href="/blog" className="nav-hover transition-colors duration-300 relative pb-1">
+              <Link href="/" className="nav-hover transition-colors duration-300 relative pb-1">
                 Blog
               </Link>
-              <Link href="/Pricing" className="nav-hover transition-colors duration-300 relative pb-1">
+              <Link href="/" className="nav-hover transition-colors duration-300 relative pb-1">
                 Pricing
               </Link>
-              <Link href="/login" className="nav-hover transition-colors duration-300 relative pb-1">
+              <Link href="/" className="nav-hover transition-colors duration-300 relative pb-1">
                 Log In
               </Link>
             </div>

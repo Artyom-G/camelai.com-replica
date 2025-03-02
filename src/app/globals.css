@@ -189,7 +189,6 @@ body {
   animation: bounceEffect 0.5s infinite alternate;
 }
 
-/* New animations */
 @keyframes pulseEffect {
   0% {
     transform: scale(0.8);
@@ -207,19 +206,10 @@ body {
 
 @keyframes bounceEffect {
   0% {
-    transform: scale(1.2);
+    transform: scale(0.95);
   }
   100% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+    transform: scale(1.05);
   }
 }
 
@@ -241,6 +231,13 @@ body {
 
 .video-container a:hover .hover-animate-colorShift {
   animation: colorShift 4s infinite;
+}
+
+.video-container a:not(:hover)::before,
+.video-container a:not(:hover)::after {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
 }
 
 .logo-carousel-wrapper {
