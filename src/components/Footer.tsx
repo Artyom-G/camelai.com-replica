@@ -30,7 +30,7 @@ export default function Footer(){
                                     {
                                         item.links.map((link, index2)=>{
                                             return(
-                                                <a className="pb-6 cursor-pointer">{link}</a>
+                                                <a key={index2} className="pb-6 cursor-pointer">{link}</a>
                                             )
                                         })
                                     }

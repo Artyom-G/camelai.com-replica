@@ -4,7 +4,7 @@ import ButtonUnfilled from "@/components/ButtonUnfilled";
 import Tag from "@/components/Tag";
 import VideoPlayer from "@/components/VideoPlayer";
 
-export default function () {
+export default function SectionMain() {
     return (
         <div className="relative flex items-center h-full w-full 
             bg-cover bg-center bg-no-repeat flex-col pb-16"
