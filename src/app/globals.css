@@ -175,12 +175,17 @@ body {
 .video-container a:hover::before,
 .video-container a:hover::after {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.1);
   animation: pulseEffect 1.5s infinite ease-in-out;
+}
+
+.video-container a{
+  filter: brightness(90%);
 }
 
 .video-container a:hover {
   transform: scale(1.2);
+  filter: brightness(100%);
   animation: bounceEffect 0.5s infinite alternate;
 }
 
