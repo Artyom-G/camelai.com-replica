@@ -188,7 +188,65 @@ body {
   animation: colorShift 4s infinite;
 }
 
-@keyframes scroll-left {
+.logo-carousel-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo-carousel-container::before,
+.logo-carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  z-index: 2;
+}
+
+.logo-carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--clr-light-background) 0%, rgba(13, 16, 20, 0) 100%);
+}
+
+.logo-carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--clr-light-background) 0%, rgba(13, 16, 20, 0) 100%);
+}
+
+.logo-track {
+  display: flex;
+  white-space: nowrap;
+  width: fit-content;
+  animation: scroll 10s linear infinite;
+}
+
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 60px;
+  margin: 0 0px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item img {
+  width: 100%; 
+  height: auto; 
+}
+
+@keyframes scroll {
   from {
     transform: translateX(0);
   }
@@ -197,10 +255,42 @@ body {
   }
 }
 
-.animate-carousel {
-  display: flex;
-  gap: 40px;
-  white-space: nowrap;
-  animation: scroll-left linear infinite;
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
+.logo-track.reverse {
+  animation: scroll-reverse 10s linear infinite;
+}
+
+.logo-track.reverse:hover {
+  animation-play-state: paused;
+}
+
+@media (min-width: 991px) {
+  .logo-carousel-container::before, .logo-carousel-container::after {
+    width: 300px;
+  }
+}
+
+.logo-carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--clr-light-background) 0%, rgba(13, 16, 20, 0) 100%);
+}
+.logo-carousel-container::before, .logo-carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+}
+.logo-carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--clr-light-background) 0%, rgba(13, 16, 20, 0) 100%);
+}

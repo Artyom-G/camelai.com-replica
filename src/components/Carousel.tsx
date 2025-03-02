@@ -1,34 +1,40 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import CarouselLogo from "./CarouselLogo";
 
 interface CarouselProps {
   logos: { imageSrc: string; link: string }[];
-  speed?: number; // Optional speed control
+  speed?: number;
 }
 
-export default function Carousel({ logos, speed = 30 }: CarouselProps) {
-  const duplicatedLogos = [...logos, ...logos]; // Duplicate for seamless looping
+export default function Carousel({ logos, speed = 1 }: CarouselProps) {
+  const duplicatedLogos = [...logos, ...logos];
   const trackRef = useRef<HTMLDivElement>(null);
-  const [animationDuration, setAnimationDuration] = useState(speed);
+  const [animationDuration, setAnimationDuration] = useState(Math.abs(speed));
 
   useEffect(() => {
     if (trackRef.current) {
-      const totalWidth = trackRef.current.scrollWidth / 2; // Half width (since duplicated)
-      const duration = totalWidth / speed; // Adjust speed based on width
+      const totalWidth = trackRef.current.scrollWidth / 2;
+      const duration = totalWidth / 30 / Math.abs(speed);
       setAnimationDuration(duration);
     }
   }, [logos, speed]);
 
   return (
-    <div className="overflow-hidden w-full relative bg-black py-4">
-      <div
-        ref={trackRef}
-        className="flex w-max animate-carousel"
-        style={{ animationDuration: `${animationDuration}s` }}
-      >
-        {duplicatedLogos.map((logo, index) => (
-          <CarouselLogo key={index} imageSrc={logo.imageSrc} link={logo.link} />
-        ))}
+    <div className="logo-carousel-wrapper">
+      <div className="logo-carousel-container relative overflow-hidden w-full py-4">
+        <div
+          ref={trackRef}
+          className={`logo-track p-3 ${speed < 0 ? "reverse" : ""}`}
+          style={{ animationDuration: `${animationDuration}s` }}
+        >
+          {duplicatedLogos.map((logo, index) => (
+            <div key={index} className="logo-item">
+              <CarouselLogo imageSrc={logo.imageSrc} link={logo.link} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
