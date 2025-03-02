@@ -3,6 +3,7 @@ import SectionCarousel from "@/components/SectionCarousel";
 import SectionImage from "@/components/SectionImage";
 import SectionColumn from "@/components/SectionColumn";
 import SectionFAQ from "@/components/SectionFAQ";
+import SectionGetStarted from "@/components/SectionGetStarted.tsx";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ preview ."
             </SectionImage>
             <SectionColumn/>
             <SectionFAQ/>
+            <SectionGetStarted/>
             <div>
                 <Footer/>
             </div>

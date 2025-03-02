@@ -38,9 +38,13 @@
   --clr-white: #fff;
   --clr-white-10: #ffffff1c;
   --clr-light-background: #0d1014;
+  --clr-light-background-blue: #1D242D;
+  --clr-link-blue: #58a0ff;
   --fs-button: 18px;
   --fw-button: 600; 
   --font-mono: 'Roboto Mono', 'Courier New', 'Inconsolata', 'Source Code Pro', 'Menlo', 'Consolas', monospace;
+  --ff-mono: 'Roboto Mono', monospace;
+  --fs-small: 12px;
 }
 
 body {
@@ -55,6 +59,11 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--clr-var-text-40) transparent;
+}
+
+.faq a {
+  color:var(--clr-link-blue);
+  cursor: pointer;
 }
 
 .primary-button {
@@ -293,4 +302,30 @@ body {
 .logo-carousel-container::before {
   left: 0;
   background: linear-gradient(to right, var(--clr-light-background) 0%, rgba(13, 16, 20, 0) 100%);
+}
+
+.question-box-body.active {
+  max-height: 1000px;
+  opacity: 1;
+  transition: max-height 1s ease-in-out, opacity 0.3s ease-out, padding 0.3s ease-out, margin 0.3s ease-out;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.question-box-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 30px;
+  background: var(--clr-light-background-blue);
+  border-radius: 0 0 8px 8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease-out, padding 0.3s ease-out, margin 0.3s ease-out;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }

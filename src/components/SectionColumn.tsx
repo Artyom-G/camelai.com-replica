@@ -3,7 +3,7 @@ import TitleDescription from "./TitleDescription";
 
 export default function SectionColumn(){
     return(
-        <section className="flex row w-full justify-center text-white">
+        <section className="flex row w-full justify-center text-white pb-[50px]">
             <div className="flex row w-full max-w-[1100px] justify-between">
                 <div className="text-left justify-start max-w-[500px]">
                     <h1 className="text-center font-mono font-light text-white text-3xl pb-10">Want to build with camelAI?</h1>

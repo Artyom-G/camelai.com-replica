@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 
 interface FAQProps {
     question: string;
-    answer: string;
+    children: ReactNode;
 }
 
-export default function FAQ({ question, answer }: FAQProps) {
+export default function FAQ({ question, children }: FAQProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleAnswer = () => {
@@ -15,16 +15,18 @@ export default function FAQ({ question, answer }: FAQProps) {
     };
 
     return (
-        <div className="border-b-3 border-gray-900 py-4 text-white">
+        <div className="py-4 text-white">
             <div
-                className="cursor-pointer text-xl font-normal pb-3 pt-3 tracking-wide"
+                className="cursor-pointer text-xl font-normal pb-3 pt-3 tracking-wide border-b-3 border-[var(--clr-light-background-blue)]"
                 onClick={toggleAnswer}
             >
                 {question}
             </div>
-            {isOpen && (
-                <p className="text-gray-500 mt-2">{answer}</p>
-            )}
+            <div className={"question-box-body text-gray-500 mt-2" + (isOpen ? " active ": "")}>
+                <span className="faq p-2 text-white tracking-wide font-mono">    
+                    {children}
+                </span>
+            </div>
         </div>
     );
 }
