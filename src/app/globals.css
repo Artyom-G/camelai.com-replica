@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 :root {
   --lt-color-gray-100: #f8f9fc;
   --lt-color-gray-200: #f1f3f9;
@@ -152,8 +147,8 @@ body {
 .video-container a::before {
   content: '';
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: linear-gradient(45deg, #58F1FF, #5F83F0, #E54BDA, #FF8D29);
   opacity: 0;
@@ -165,26 +160,53 @@ body {
 .video-container a::after {
   content: '';
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  border: 5px solid rgba(255, 255, 255, 0.3);
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.5s ease;
-  z-index: 10;
+  z-index: 20;
 }
 
 .video-container a:hover::before,
 .video-container a:hover::after {
   opacity: 1;
   transform: scale(1);
+  animation: pulseEffect 1.5s infinite ease-in-out;
 }
 
-.video-container a:hover{
+.video-container a:hover {
   transform: scale(1.2);
+  animation: bounceEffect 0.5s infinite alternate;
+}
+
+/* New animations */
+@keyframes pulseEffect {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+}
+
+@keyframes bounceEffect {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 @keyframes rotate {

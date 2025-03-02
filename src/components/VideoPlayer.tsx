@@ -7,7 +7,7 @@ interface VideoPlayerProps {
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc }) => {
   return (
-    <div className="relative w-full h-full max-w-[980px] overflow-hidden video-container">
+    <div className="relative w-[95%] h-full max-w-[980px] overflow-hidden video-container">
       <video
         src={videoSrc}
         autoPlay

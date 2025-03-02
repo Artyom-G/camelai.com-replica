@@ -28,5 +28,5 @@ The deployment of the project is available on [Vercel](https://camelai-com-repli
 
 ## Contact
 
-For any questions, feel free to open an issue or contact me at [[artyomgv05@gmail.com](mailto\:artyomgv05@gmail.com)].
+For any questions, feel free to open an issue or contact me at [artyomgv05@gmail.com](mailto\:artyomgv05@gmail.com).
 
